@@ -1,0 +1,9 @@
+SKYGEAR_USERNAME="$(cat /proc/cpuinfo | grep Serial | cut -d ':' -f 2)"
+SKYGEAR_PASSWORD=$(cat /sys/class/net/eth0/address)
+SKYGEAR_APIKEY=""
+SKYGEAR_ENDPOINT=""
+
+export SKYGEAR_USERNAME
+export SKYGEAR_PASSWORD
+export SKYGEAR_APIKEY
+export SKYGEAR_ENDPOINT
