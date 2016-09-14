@@ -26,7 +26,7 @@ And have clean Raspbian installed on yout pi.
 1. Go to the project directory
    - `cd raspberrypi-example`
 1. Install the required deps about this project
-   - `npm isntall`
+   - `npm install`
 1. Before kicking up the example, please specific your environment need to
    make the example works. An example `skygear.sh.example` is located at this
    repository. Copy it to `/etc/profile.d/skygear.sh`. Edit the `SKYGEAR_API`and
