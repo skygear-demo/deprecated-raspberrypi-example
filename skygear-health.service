@@ -11,6 +11,7 @@ Group=pi
 StandardOutput=syslog
 StandardError=syslog
 Environment=PATH=/usr/bin:/usr/local/bin
+EnvironmentFile=/home/pi/raspberrypi-example/skygear.env
 WorkingDirectory=/var/skygear/health
 
 [Install]

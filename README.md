@@ -32,18 +32,19 @@ also include command to list out the latest health data of the raspberrypi.
 1. Install the required deps about this project
    - `npm install`
 1. Before kicking up the example, please specific your environment need to
-   make the example works. An example `skygear.sh.example` is located at this
-   repository. Copy it to `/etc/profile.d/skygear.sh`. Edit the `SKYGEAR_API`and
+   make the example works. An example `skygear.env.example` is located at this
+   repository. Copy it as` skygeae.env`. Edit the `SKYGEAR_API` and
    `SKYGEAR_ENDPOINT` value according to the value display at
    https://portal.skygear.io
     -  Skygear is user base system, you can register your raspberrypi as a normal
        user and interact with Skygear. We suggest to use Serial No. and Mac
        address as the username and password. Which is the provided in the
-       `skygear.sh.example` 
+       `skygear.env.example` 
     -  You are free to use other system identifer, such as IPv6 Address. The
        principle is a tuple that are safe to identifier your device at Skygear.
-1. After the value is edit, run `. /etc/profile.d/skygear.sh` to activate the
-   environment variable for your current session.
+1. After the value is edit, copy `skygear.sh`to `/etc/profile.d/skygear.sh`.
+   Run `. /etc/profile.d/skygear.sh` to activate the environment variable for
+   your current session.
 1. Install the health check service as system services,
    ``` shell
    sudo cp skygear-health.service /etc/systemd/system/skygear-health.service
