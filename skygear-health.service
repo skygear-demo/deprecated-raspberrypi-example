@@ -1,0 +1,17 @@
+[Unit]
+Description=Health Report to Skygear
+After=network.target
+
+[Service]
+ExecStart=/home/pi/raspberrypi-example/index.js %i
+Restart=always
+RestartSec=10
+User=pi
+Group=pi
+StandardOutput=syslog
+StandardError=syslog
+Environment=PATH=/usr/bin:/usr/local/bin
+WorkingDirectory=/var/skygear/health
+
+[Install]
+WantedBy=multi-user.target

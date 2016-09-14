@@ -9,7 +9,7 @@ And have clean Raspbian installed on yout pi.
 1. Find your raspberrypi IP at your router, or follow the instruction for
    scaning your subnet:
    https://www.raspberrypi.org/documentation/remote-access/ip-address.md
-1. ssh to raspberrypi, `ssh pi@192.168.x.x` default password: `raspberry
+1. ssh to raspberrypi, `ssh pi@192.168.x.x` default password: `raspberry`
    - Is is suggested to change your password, use command `passwd`. For more
      detail instruction, please follow the instruction here:
      https://www.raspberrypi.org/documentation/linux/usage/users.md 
@@ -21,6 +21,10 @@ And have clean Raspbian installed on yout pi.
 
 
 ### Loading this demo project into your raspberrypi
+
+This project include a simple health report of the raspberrypi to Skygear. It
+also include command to list out the latest health data of the raspberrypi.
+
 1. clone the project
    - `git clone https://github.com/skygear-demo/raspberrypi-example.git`
 1. Go to the project directory
@@ -40,3 +44,12 @@ And have clean Raspbian installed on yout pi.
        principle is a tuple that are safe to identifier your device at Skygear.
 1. After the value is edit, run `. /etc/profile.d/skygear.sh` to activate the
    environment variable for your current session.
+1. Install the health check service as system services,
+   ``` shell
+   sudo cp skygear-health.service /etc/systemd/system/skygear-health.service
+   sudo systemctl daemon-reload
+   sudo systemctl start skygear-health
+   sudo systemctl enable skygear-health
+   ```
+1. Check the log by `sudo journalctl --follow -u skygear-health`
+
