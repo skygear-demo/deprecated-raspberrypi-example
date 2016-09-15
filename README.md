@@ -1,5 +1,13 @@
-This is a simple Raspberry Pi setup demonstrating the usage of Skygear JS SDK in
+# Skygear Working Example on Raspberry Pi
+
+This is a simple Raspberry Pi setup demonstrating the usage of [Skygear JS SDK](https://docs.skygear.io/js/guide/) in
 Raspberry Pi.
+
+This demo project demonstrates the following:
+
+- register the active device on Skygear server
+- send tempurature and other Raspberry Pi live information to the server periodically
+- fetch recent records from Skygear server
 
 Firstly please follow the installation guide on 
 [raspberrypi.org](https://www.raspberrypi.org/documentation/installation/). We 
@@ -9,6 +17,18 @@ assume you would have a clean Raspbian installed on your pi device.
 1. Find your Raspberry Pi IP at your router, or follow the instruction for
    scaning your subnet:
    https://www.raspberrypi.org/documentation/remote-access/ip-address.md
+   
+   Use `nmap` to scan IPs on your network. You may have to use `sudo` to get device info
+   `sudo nmap -sP 192.168.0.0/22`
+   
+   result:
+
+    ``` shell
+    Host is up (0.0064s latency).
+    MAC Address: B8:XX:XX:XX:XX:9X (Raspberry Pi Foundation)
+    Nmap scan report for 192.168.2.XXX
+    ```
+   
 1. ssh to the Raspberry Pi, `ssh pi@192.168.x.x` default password: `raspberry`
    - To change your password, use command `passwd`. For more detailed instruction,
      please follow the instruction here:
@@ -22,7 +42,7 @@ assume you would have a clean Raspbian installed on your pi device.
 
 ### Load this demo project into your Raspberry Pi
 
-This project include a simple health report of the Raspberry Pi to Skygear. It
+This project includes a simple health report of the Raspberry Pi to Skygear. It
 also includes a command to list out the latest health data of the Raspberry Pi.
 
 1. `cd /home/pi/`
