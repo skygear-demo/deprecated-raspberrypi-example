@@ -1,17 +1,17 @@
 This is a simple raspberrypi setup demonstrating the usage of Skygear JS SDK in
 reapberrypi.
 
-First, we assume you follow the Installation guide on 
+Please follow the Installation guide on 
 [raspberrypi.org](https://www.raspberrypi.org/documentation/installation/).
-And have clean Raspbian installed on yout pi.
+Follow instruction assume a clean Raspbian installed on yout pi.
 
 ### Setup the raspberrypi for running nodejs
 1. Find your raspberrypi IP at your router, or follow the instruction for
    scaning your subnet:
    https://www.raspberrypi.org/documentation/remote-access/ip-address.md
 1. ssh to raspberrypi, `ssh pi@192.168.x.x` default password: `raspberry`
-   - Is is suggested to change your password, use command `passwd`. For more
-     detail instruction, please follow the instruction here:
+   - To change your password, use command `passwd`. For more detail instruction,
+     please follow the instruction here:
      https://www.raspberrypi.org/documentation/linux/usage/users.md 
 1. Update the node environment:
     - `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
@@ -25,7 +25,8 @@ And have clean Raspbian installed on yout pi.
 This project include a simple health report of the raspberrypi to Skygear. It
 also include command to list out the latest health data of the raspberrypi.
 
-1. clone the project
+1. `cd /home/pi/`
+1. Clone the project
    - `git clone https://github.com/skygear-demo/raspberrypi-example.git`
 1. Go to the project directory
    - `cd raspberrypi-example`
