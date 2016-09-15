@@ -55,4 +55,6 @@ also include command to list out the latest health data of the raspberrypi.
    ```
 
 1. Check the log by `sudo journalctl --follow -u skygear-health`
+1. Tun `./query.js` for querying and display the recent health data from
+   Skygear.
 

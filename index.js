@@ -17,9 +17,12 @@ const HealthModel = skygear.Record.extend('piHealth');
 
 function sendHealth() {
   exec(`vcgencmd measure_temp`, (error, stdout, stderr) => {
-    console.log('Temp', stdout);
+    const cpuTemp = stdout.replace(/temp=(.*)\n/, function() {
+      return arguments[1];
+    });
+    console.log('Temp ', cpuTemp);
     const h = new HealthModel({
-      cpuTemp: stdout
+      cpuTemp: cpuTemp
     });
     skygear.privateDB.save(h);
   });
