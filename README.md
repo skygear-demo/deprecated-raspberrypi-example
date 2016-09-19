@@ -3,7 +3,7 @@
 This is a simple Raspberry Pi setup demonstrating the usage of [Skygear JS SDK](https://docs.skygear.io/js/guide/) in
 Raspberry Pi.
 
-This demo project demonstrates the following:
+This demo project demonstrates the followings:
 
 - register the active device on Skygear server
 - send tempurature and other Raspberry Pi live information to the server periodically
