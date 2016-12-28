@@ -44,6 +44,8 @@ skygear.config({
       console.log('Sucessfully login');
       sendHealth();
       setInterval(sendHealth, interval);
+    }, (err) => {
+      console.log(err);
     });
   });
 });
