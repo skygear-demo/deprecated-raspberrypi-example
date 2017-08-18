@@ -1,3 +1,7 @@
+# DEPRECATED
+
+The Skygear IoT plugins only works with Skygear v0, but not in latest v1.
+
 # Skygear Working Example on Raspberry Pi
 
 This is a simple Raspberry Pi setup demonstrating the usage of [Skygear JS SDK](https://docs.skygear.io/js/guide/) in
